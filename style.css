@@ -142,9 +142,72 @@ main {
   color: var(--text);
 }
 
+.timeline-section {
+  padding-block: clamp(5rem, 10vw, 9rem);
+  border-top: 1px solid var(--border);
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.5fr) 1.5fr;
+  gap: 2rem;
+  margin-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-family: monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.timeline {
+  border-top: 1px solid var(--border);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.5fr) 1.5fr;
+  gap: 2rem;
+  padding-block: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-date {
+  margin: 0;
+  color: var(--muted);
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 500;
+}
+
+.timeline-company {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+}
+
+.timeline-detail {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
 /* Phone layout */
 @media (max-width: 600px) {
+
   body {
     padding: 0;
   }
@@ -177,13 +240,21 @@ main {
   }
 
   .hero h1 {
-  font-size: clamp(2.25rem, 11vw, 3.25rem);
+  font-size: clamp(2rem, 9vw, 2.75rem);
   }
 
   .portrait {
     margin-bottom: 5rem;
   }
 
+  .section-heading,
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .timeline-section {
+    padding-block: 4rem;
+  }
   #projects {
     padding-block: 4rem;
   }
