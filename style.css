@@ -131,6 +131,7 @@ main {
 
 .header .logo span {
   line-height: 1.05;
+  font-weight: 500;
 }
 .header .logo img {
   width: 42px;
