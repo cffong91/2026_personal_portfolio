@@ -135,6 +135,7 @@ main {
 
 .header .logo span {
   line-height: 1.05;
+  font-family: monospace;
   font-weight: 500;
 }
 .header .logo img {
@@ -152,6 +153,7 @@ main {
 .header nav a {
   display: inline-block;
   color: var(--muted);
+  font-family: monospace;
   text-decoration: none;
   transition:
     color 180ms ease,
