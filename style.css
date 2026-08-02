@@ -79,6 +79,7 @@ main {
   display: inline-flex;
   align-items: center;
   min-height: 52px;
+  margin-top: 2rem;
   padding: 0 24px;
   border-radius: 999px;
   background: var(--accent);
