@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -103,6 +104,10 @@ main {
   border-top: 1px solid var(--border);
 }
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   width: min(100%, var(--page-width));
   min-height: 88px;
   display: flex;
