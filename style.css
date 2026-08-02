@@ -120,6 +120,9 @@ main {
   text-decoration: none;
 }
 
+.header .logo span {
+  line-height: 1.05;
+}
 .header .logo img {
   width: 42px;
   height: 42px;
@@ -223,6 +226,10 @@ main {
   .header .logo {
   gap: 8px;
   font-size: 0.85rem;
+  }
+
+  .header .logo span {
+  line-height: 0.9;
   }
 
   .header .logo img {
