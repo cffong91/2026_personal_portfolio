@@ -50,6 +50,10 @@ main {
   letter-spacing: -0.04em;
 }
 
+.hero h1 span {
+  display: block;
+}
+
 .hero p {
   max-width: 720px;
   margin: 2rem auto;
@@ -209,8 +213,20 @@ main {
 }
 
 /* Phone layout */
-@media (max-width: 600px) {
+/* Large-screen headline */
+@media (min-width: 900px) {
+  .hero h1 {
+    max-width: none;
+    width: 100%;
+  }
 
+  .hero h1 span {
+    white-space: nowrap;
+  }
+}
+
+/* Phone layout */
+@media (max-width: 600px) {
   body {
     padding: 0;
   }
@@ -218,27 +234,29 @@ main {
   main {
     padding: 20px;
   }
+
   .header {
-  min-height: 72px;
-  padding-inline: 20px;
-  } 
+    min-height: 72px;
+    padding-inline: 20px;
+  }
 
   .header .logo {
-  gap: 8px;
-  font-size: 0.85rem;
+    gap: 8px;
+    font-size: 0.85rem;
   }
 
   .header .logo span {
-  line-height: 0.9;
+    line-height: 0.9;
   }
 
   .header .logo img {
-  width: 34px;
-  height: 34px;
+    width: 34px;
+    height: 34px;
   }
+
   .header nav {
-  gap: 12px;
-  font-size: 0.8rem;
+    gap: 12px;
+    font-size: 0.8rem;
   }
 
   .hero {
@@ -247,7 +265,7 @@ main {
   }
 
   .hero h1 {
-  font-size: clamp(2rem, 9vw, 2.75rem);
+    font-size: clamp(2rem, 9vw, 2.75rem);
   }
 
   .portrait {
@@ -259,9 +277,11 @@ main {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
+
   .timeline-section {
     padding-block: 4rem;
   }
+
   #projects {
     padding-block: 4rem;
   }
