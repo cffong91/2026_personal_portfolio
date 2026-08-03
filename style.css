@@ -73,13 +73,6 @@ main {
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
-.hero p {
-  max-width: 720px;
-  margin: 2rem auto;
-  color: var(--muted);
-  font-size: clamp(1rem, 2vw, 1.3rem);
-}
-
 .hero a {
   display: inline-flex;
   align-items: center;
@@ -300,13 +293,28 @@ main {
   outline-offset: 4px;
 }
 
-.project-card {
-  max-width: 760px;
+.project-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(760px, 85vw);
+  gap: 2rem;
   margin-top: 3rem;
+  padding-bottom: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+}
+
+.project-card {
+  width: 100%;
+  max-width: none;
+  margin: 0;
   padding: clamp(1.5rem, 4vw, 3rem);
   border: 1px solid var(--border);
   border-radius: 4px;
   background: #fafafa;
+  scroll-snap-align: start;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
@@ -449,4 +457,10 @@ main {
   #projects {
     padding-block: 4rem;
   }
+
+  .project-carousel {
+  grid-auto-columns: 88%;
+  gap: 1rem;
+  }
+
 }
