@@ -110,6 +110,85 @@ main {
   border-radius: 2px;
 }
 
+.portrait-about {
+  position: relative;
+  overflow: hidden;
+  background: #111111;
+  cursor: pointer;
+}
+
+.portrait-about img {
+  transition:
+    opacity 500ms ease,
+    filter 500ms ease,
+    transform 700ms ease;
+}
+
+.portrait-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  color: white;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.portrait-about:hover img,
+.portrait-about:focus img,
+.portrait-about.is-revealed img {
+  opacity: 0.22;
+  filter: grayscale(100%);
+  transform: scale(1.03);
+}
+
+.portrait-about:hover .portrait-overlay,
+.portrait-about:focus .portrait-overlay,
+.portrait-about.is-revealed .portrait-overlay {
+  opacity: 1;
+}
+
+.about-label {
+  margin: 0 0 1rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.about-typewriter {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  line-height: 1.55;
+}
+
+.about-typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 4px;
+  background: currentColor;
+  vertical-align: -0.1em;
+  animation: cursor-blink 800ms steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 #projects {
   min-height: 400px;
   padding: 6rem 0;

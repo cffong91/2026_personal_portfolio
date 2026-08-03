@@ -46,20 +46,43 @@
         <a class="button" href="#projects">View my work</a>
 
       </section>
-      <figure class="portrait">
-        <img
-          src="images/portrait.jpeg"
-          alt="Portrait of Calvin Fong"
-        />
-      </figure>
-      <section id="about">
-        <div class="section-heading">
-        <p>01 / About</p>
-        <p>Hi, I'm Calvin. I enjoy building products that solve real customer problems, especially where technology, operations, and business strategy intersect. Before product management, I spent several years in finance, and today I focus on creating products that are simple, impactful, and built to scale. When not working, I'm either traveling, watching the Warriors, Red Sox or WWE, playing my PS5, or listening to my favorite 2000's dance music at the gym.</p>
-      </section>
+      
+      <figure
+  id="about"
+  class="portrait portrait-about"
+  tabindex="0"
+  aria-label="About Calvin Fong"
+>
+  <img
+    src="./images/portrait.jpeg"
+    alt="Portrait of Calvin Fong"
+  />
+
+  <figcaption class="portrait-overlay">
+    <p class="about-label">About me</p>
+
+    <p
+      class="about-typewriter"
+      data-text="Hi, I'm Calvin. I enjoy building products that solve real customer problems, especially where technology, operations, and business strategy intersect. Before product management, I spent several years in finance, and today I focus on creating products that are simple, impactful, and built to scale. When not working, I'm either traveling, watching the Warriors, Red Sox or WWE, playing my PS5, or listening to my favorite 2000's dance music at the gym."
+      aria-hidden="true"
+    ></p>
+
+    <span class="visually-hidden">
+      Hi, I'm Calvin. I enjoy building products that solve real 
+      customer problems, especially where technology, operations, 
+      and business strategy intersect. Before product management, 
+      I spent several years in finance, and today I focus on creating 
+      products that are simple, impactful, and built to scale. When not 
+      working, I'm either traveling, watching the Warriors, Red Sox or 
+      WWE, playing my PS5, or listening to my favorite 2000's dance 
+      music at the gym.
+    </span>
+  </figcaption>
+</figure>
+      
       <section id="experience" class="timeline-section">
         <div class="section-heading">
-          <p>02 / Experience</p>
+          <p>01 / Experience</p>
           <h2>Where I’ve worked</h2>
         </div>
 
@@ -139,7 +162,7 @@
 
       <section id="education" class="timeline-section">
         <div class="section-heading">
-          <p>03 / Education</p>
+          <p>02 / Education</p>
           <h2>Where I’ve studied</h2>
         </div>
 
