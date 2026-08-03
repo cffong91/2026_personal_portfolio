@@ -268,6 +268,38 @@ main {
   font-size: 0.9rem;
 }
 
+/* Contact */
+#contact {
+  padding-block: 5rem;
+  border-top: 1px solid var(--border);
+}
+
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-link img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.email-link:hover img {
+  opacity: 0.65;
+  transform: translateY(-2px);
+}
+
+.email-link:focus-visible {
+  outline: 3px solid #88aaff;
+  outline-offset: 4px;
+}
+
 .footer {
   width: min(100%, var(--page-width));
   display: flex;
