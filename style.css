@@ -300,6 +300,53 @@ main {
   outline-offset: 4px;
 }
 
+.project-card {
+  max-width: 760px;
+  margin-top: 3rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fafafa;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.project-label {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-family: monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  letter-spacing: -0.03em;
+}
+
+.project-card > p:not(.project-label) {
+  max-width: 600px;
+  margin: 1rem 0 2rem;
+  color: var(--muted);
+}
+
+.project-card a {
+  color: var(--text);
+  font-family: monospace;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   width: min(100%, var(--page-width));
   display: flex;
