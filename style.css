@@ -374,7 +374,7 @@ main {
   background: var(--accent);
 }
 
-#experience .timeline-item.current h3::after {
+.timeline-item.current h3::after {
   content: "CURRENT";
   display: inline-block;
   margin-left: 0.75rem;
